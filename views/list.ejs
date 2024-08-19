@@ -1,0 +1,56 @@
+<%- include('header') %>
+
+<body>
+	<div class="container mx-auto p-4">
+		<div class="container mt-4">
+
+			<header class="custom-header">
+				<h1>Use This For Creating Seperate Note</h1>
+				<form id="redirectForm" action="#" method="get" class="custom-form">
+					<textarea id="redirectText" name="redirectText" placeholder="Enter text" class="custom-textarea"></textarea>
+					<button type="submit" class="custom-button">Submit</button>
+				</form>
+			</header>
+
+		</div>
+
+
+		<div class="container mt-4">
+			<div class="heading">
+				<p><%= day %></p>
+			</div>
+			<div class="form-container">
+				<div class="box">
+					<% for(var i = 0; i < newListItems.length; i++) { %>
+					<form action="/todelete" method="post">
+						<div class="checkbox">
+							<input type="checkbox" class="req" onChange="this.form.submit()" name="checkbox" value="<%= newListItems[i]._id %>" />
+							<input type="hidden" name="listName" value="<%= day %>" />
+							<p><%= newListItems[i].name %></p>
+						</div>
+					</form>
+					<% } %>
+				</div>
+				<div class="writelist mt-4">
+					<form method="post" action="/">
+						<input type="text" name="newItem" placeholder="New Item" class="inputclass p-2 border rounded mr-2" />
+						<input type="hidden" name="listName" value="<%= day %>" />
+						<button type="submit" class="btn-class bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">+</button>
+					</form>
+				</div>
+			</div>
+			<footer class="center-class text-center mt-4">Copyright 2024 ToDoList</footer>
+		</div>
+	</div>
+	<%- include('footer') %>
+</body>
+
+<script>
+	document.getElementById('redirectForm').addEventListener('submit', function(event) {
+		event.preventDefault();
+		var text = document.getElementById('redirectText').value;
+		if (text) {
+			window.location.href = 'http://localhost:3000/' + encodeURIComponent(text);
+		}
+	});
+</script>

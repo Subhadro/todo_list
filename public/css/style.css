@@ -1,0 +1,133 @@
+html {
+    background-color: #E4E9FD;
+    background-image: -webkit-linear-gradient(70deg, #A683E3 50%, #E4E9FD 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 1000px;
+    font-family: 'helvetica', arial;
+}
+
+.container {
+    width: 450px;
+    position: relative;
+    bottom: 40px;
+}
+
+.req {
+    padding: 10px;
+    margin: 10px;
+}
+
+.form-container {
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px;
+}
+
+.checkbox {
+    color: black;
+    display: flex;
+    margin: 2px;
+    padding: 4px;
+}
+
+input:checked+p {
+    text-decoration: line-through;
+    text-decoration: color(srgb-linear rgb(193, 166, 166) rgb(159, 173, 159) rgb(125, 125, 150));
+    color: burlywood;
+}
+
+.heading {
+    background-color: #A683E3;
+    color: white;
+    padding: 2px;
+    font-size: 25px;
+    font-weight: 900;
+    margin: 20px;
+    border: 2px solid blue;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+}
+
+.writelist {
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 4px;
+    margin: 4px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputclass {
+    padding: 10px;
+    font-size: large;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.btn-class {
+    /* padding: 10px; */
+    border: 2px solid black;
+    width: 50px;
+    height: 50px;
+    border-radius: 92px;
+    padding: 5px;
+    background-color: #A683E3;
+    color: white;
+    font-size: 30px;
+}
+
+.center-class {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.custom-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.custom-header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.custom-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.custom-textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.custom-button {
+    background-color: #38a169;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.custom-button:hover {
+    background-color: #2f855a;
+}
